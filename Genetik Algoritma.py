@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 
 # 1️⃣ Dosya Yolları: Ana veri dosyalarının konumlarını belirle
-kumas_path = "CC:/Users/evrim/OneDrive/Masaüstü/depoyogunluk.xlsx"
+kumas_path = "C:/Users/evrim/OneDrive/Masaüstü/depoyogunluk.xlsx"
 raf_path   = "C:/Users/evrim/OneDrive/Masaüstü/RAFVE YERLEŞİM.xlsx"
 rule1_path = "C:/Users/evrim/OneDrive/Masaüstü/rule1.xlsx"
 rule2_path = "C:/Users/evrim/OneDrive/Masaüstü/rule2.xlsx"
@@ -696,6 +696,7 @@ with pd.ExcelWriter(isim, engine="openpyxl", mode="w") as writer:
     verim_ozeti_df.to_excel(writer, sheet_name="Verim Özeti", index=False)
     yerlesim_df.to_excel(writer, sheet_name="Yerleşim Ham Veri", index=False)
     kumas_skor_detay_df.to_excel(writer, sheet_name="Top Bazlı Skorlar", index=False)
+
 
 
 print(f"Excel çıktısı başarıyla oluşturuldu: {isim}")
